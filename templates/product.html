@@ -1,0 +1,184 @@
+{% extends "layout.html" %}
+{% block content %}
+            <!-- content-wraper start -->
+            <div class="content-wraper">
+                <div class="container">
+                    <div class="row single-product-area">
+                        <div class="col-lg-5 col-md-6">
+                           <!-- Product Details Left -->
+                                    <div class="lg-image">
+                                        <img src="static/images/product/{{ isbn }}.jpg" alt="product image" style="width: 300px">
+                                    </div>
+                            <!--// Product Details Left -->
+                        </div>
+                        {% if products != null %}
+                            {% for row in products %}
+                        <div class="col-lg-7 col-md-6">
+                            <div class="product-details-view-content sp-normal-content pt-60">
+                                <div class="product-info">
+                                    <h2>{{ row[0] }}</h2>
+                                    <span class="product-details-ref">ISBN: {{ row[2] }}</span>
+                                    <div class="price-box pt-20">
+                                        <span class="new-price new-price-2">{{ row[1] }}</span>
+                                    </div>
+                                    <div class="product-desc">
+                                        <p>
+                                            <span>Buy this product, {{ row[0] }} is awesome!
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="single-add-to-cart">
+                                        <form action="https://overheardinnewyork.com/" class="cart-quantity">
+                                            <button class="add-to-cart" type="submit">FUN BUTTON</button>
+                                        </form>
+                                    </div>
+                                    <div class="product-additional-info">
+                                        <div class="product-social-sharing">
+                                            <ul>
+                                                <li class="facebook"><a href="https://www.facebook.com/Meta"><i class="fa fa-facebook"></i>Facebook</a></li>
+                                                <li class="twitter"><a href="https://twitter.com/"><i class="fa fa-twitter"></i>Twitter</a></li>
+                                                <li class="google-plus"><a href="https://www.microsoft.com/en-us/edge?exp=e544&form=MM145Z&brand=M152&ef_id=_k_CjwKCAjw3ueiBhBmEiwA4BhspITaav0H412Gi71UlL67s5G0zSo31zcLWdkkdxT70ucb0DQuoGl_wRoCOp8QAvD_BwE_k_&OCID=AIDcmmm6jz4jsn_SEM__k_CjwKCAjw3ueiBhBmEiwA4BhspITaav0H412Gi71UlL67s5G0zSo31zcLWdkkdxT70ucb0DQuoGl_wRoCOp8QAvD_BwE_k_&gad=1&gclid=CjwKCAjw3ueiBhBmEiwA4BhspITaav0H412Gi71UlL67s5G0zSo31zcLWdkkdxT70ucb0DQuoGl_wRoCOp8QAvD_BwE"><i class="fa fa-google-plus"></i>Google +</a></li>
+                                                <li class="instagram"><a href="https://www.instagram.com/instagram/?hl=en"><i class="fa fa-instagram"></i>Instagram</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+                        {% endfor %}
+                            {% endif %}
+            <!-- content-wraper end -->
+            <!-- Begin Product Area -->
+            <div class="product-area pt-40">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="li-product-tab">
+                                <ul class="nav li-product-menu">
+                                   <li><a class="active" data-toggle="tab"><span>Locations where you can find it</span></a></li>
+                                </ul>               
+                            </div>
+                            <!-- Begin Li's Tab Menu Content Area -->
+                        </div>
+                    </div>
+                    {% if locations != null %}
+                    <div class="tab-content">
+                        <div id="description" class="tab-pane active show" role="tabpanel">
+                            <div class="product-description">
+                                <span>Address: {{ locations[0][1] }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            <!-- Product Area End Here -->
+            <!-- Li's Laptop Product Area End Here -->
+            <!-- Begin Footer Area -->
+            <div class="footer">
+                <!-- Begin Footer Static Top Area -->
+                <div class="footer-static-top footer-static-top-3 pt-xs-50 pb-xs-10">
+                    <div class="container">
+                        <!-- Begin Footer Shipping Area -->
+                        <div class="footer-shipping pb-xs-0">
+                            <div class="row">
+                                <!-- Begin Li's Shipping Inner Box Area -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 pb-xs-45">
+                                    <div class="li-shipping-inner-box">
+                                        <div class="shipping-icon">
+                                            <img src="/static/images/shipping-icon/1.png" alt="Shipping Icon">
+                                        </div>
+                                        <div class="shipping-text">
+                                            <h2>Lots of Games</h2>
+                                            <p>Search your favorite games.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Li's Shipping Inner Box Area End Here -->
+                                <!-- Begin Li's Shipping Inner Box Area -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 pb-xs-45">
+                                    <div class="li-shipping-inner-box">
+                                        <div class="shipping-icon">
+                                            <img src="/static/images/shipping-icon/2.png" alt="Shipping Icon">
+                                        </div>
+                                        <div class="shipping-text">
+                                            <h2>Location</h2>
+                                            <p>Check the location closer to you.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Li's Shipping Inner Box Area End Here -->
+                                <!-- Begin Li's Shipping Inner Box Area -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 pb-xs-45">
+                                    <div class="li-shipping-inner-box">
+                                        <div class="shipping-icon">
+                                            <img src="/static/images/shipping-icon/3.png" alt="Shipping Icon">
+                                        </div>
+                                        <div class="shipping-text">
+                                           <h2>Cancel Your Pre order</h2>
+                                            <p>Cancel the Pre order you made at our location.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Li's Shipping Inner Box Area End Here -->
+                                <!-- Begin Li's Shipping Inner Box Area -->
+                                <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="li-shipping-inner-box last-child">
+                                        <div class="shipping-icon">
+                                            <img src="/static/images/shipping-icon/4.png" alt="Shipping Icon">
+                                        </div>
+                                        <div class="shipping-text">
+                                            <h2>Inventory</h2>
+                                            <p>Check which location has the game you want.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Li's Shipping Inner Box Area End Here -->
+                            </div>
+                        </div>
+                        <!-- Footer Shipping Area End Here -->
+                    </div>
+                </div>
+                <!-- Footer Static Top Area End Here -->
+                <!-- Begin Footer Static Middle Area -->
+                <div class="footer-static-middle">
+                    <div class="container">
+                        <div class="footer-logo-wrap pt-50 pb-35">
+                            <div class="row">
+
+                                <!-- Footer Block Area End Here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Static Middle Area End Here -->
+                <!-- Begin Footer Static Bottom Area -->
+                <div class="footer-static-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!-- Begin Footer Links Area -->
+                                <div class="footer-links">
+                                    <ul>
+                                        <li><a href="https://www.youtube.com/watch?v=K1aZzGmI9QA">Distinguished Gentleman</a></li>
+                                        <li><a href="https://www.youtube.com/watch?v=UPXUG8q4jKU">Pizza rat</a></li>
+                                        <li><a href="https://puginarug.com/">Holy pug</a></li>
+                                        <li><a href="https://cursoreffects.com/">90's</a></li>
+                                </div>
+                                <!-- Footer Links Area End Here -->
+                                <!-- Begin Copyright Area -->
+                                <div class="copyright text-center pt-30 pb-50">
+                                    <span><a target="_blank">© 2023 GameStart</a></span>
+                                </div>
+                                <!-- Copyright Area End Here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Static Bottom Area End Here -->
+            </div>
+            <!-- Footer Area End Here -->
+ {% endblock %}

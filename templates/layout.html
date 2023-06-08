@@ -1,0 +1,134 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<!-- index-331:38-->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>GameStart</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="static/images/favicon.png">
+        <!-- Material Design Iconic Font-V2.2.0 -->
+        <link rel="stylesheet" href="static/css/material-design-iconic-font.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="static/css/font-awesome.min.css">
+        <!-- Font Awesome Stars-->
+        <link rel="stylesheet" href="static/css/fontawesome-stars.css">
+        <!-- Mainmenu CSS -->
+        <link rel="stylesheet" href="static/css/meanmenu.css">
+        <!-- owl carousel CSS -->
+        <link rel="stylesheet" href="static/css/owl.carousel.min.css">
+        <!-- Slick Carousel CSS -->
+        <link rel="stylesheet" href="static/css/slick.css">
+        <!-- Animate CSS -->
+        <link rel="stylesheet" href="static/css/animate.css">
+        <!-- Jquery-ui CSS -->
+        <link rel="stylesheet" href="static/css/jquery-ui.min.css">
+        <!-- Venobox CSS -->
+        <link rel="stylesheet" href="static/css/venobox.css">
+        <!-- Nice Select CSS -->
+        <link rel="stylesheet" href="static/css/nice-select.css">
+        <!-- Magnific Popup CSS -->
+        <link rel="stylesheet" href="static/css/magnific-popup.css">
+        <!-- Bootstrap V4.1.3 Framework CSS -->
+        <link rel="stylesheet" href="static/css/bootstrap.min.css">
+        <!-- Helper CSS -->
+        <link rel="stylesheet" href="static/css/helper.css">
+        <!-- Main Style CSS -->
+        <link rel="stylesheet" href="static/style.css">
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="static/css/responsive.css">
+        <!-- Modernizr js -->
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+            <!-- main_js -->
+        <link rel="stylesheet" href="static/js/main.js">
+        <!--Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    </head>
+    <body>
+    <!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+        <!-- Begin Body Wrapper -->
+        <div class="body-wrapper">
+            <!-- Begin Header Area -->
+            <header>
+                <!-- Begin Header Top Area -->
+                <div class="header-top">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Begin Header Top Left Area -->
+                            <div class="col-lg-3 col-md-4">
+                                <div class="header-top-left">
+                                    <ul class="phone-wrap">
+                                        <li><span>Telephone:</span> +1 123 456 7890</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Header Top Left Area End Here -->
+                            <!-- Begin Header Top Right Area -->
+                            <ul class="ht-menu">
+                        </div>
+                    </div>
+                </div>
+                <!-- Begin Header Middle Area -->
+                <div class="header-middle pl-sm-0 pr-sm-0 pl-xs-0 pr-xs-0">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Begin Header Logo Area -->
+                            <div class="col-lg-3">
+                                <div class="logo pb-sm-30 pb-xs-30">
+                                    <a href="/">
+                                        <img src="/static/images/menu/logo/logo.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Header Logo Area End Here -->
+                            <!-- Begin Header Middle Right Area -->
+                            <div class="col-lg-9">
+                                <!-- Begin Header Middle Searchbox Area -->
+                                <form action="{{ url_for('search_item') }}" method="POST" class="hm-searchbox">
+                                    <input type="text" name="item" placeholder="Type product name">
+                                    <button class="li-btn"><i class="fas fa-search"></i></button>
+                                </form>
+                                <!-- Header Middle Searchbox Area End Here -->
+                                <!-- Begin Header Middle Right Area -->
+                                <div class="header-middle-right">
+                                    <ul class="hm-menu">
+                                    </ul>
+                                </div>
+                                <!-- Header Middle Right Area End Here -->
+                            </div>
+                            <!-- Header Middle Right Area End Here -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Header Middle Area End Here -->
+                <!-- Begin Header Bottom Area -->
+                <div class="header-bottom header-sticky stick d-none d-lg-block d-xl-block">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!-- Begin Header Bottom Menu Area -->
+                                <div class="hb-menu hb-menu-2">
+                                    <nav>
+                                        <ul>
+                                            <li><a href="/cancel_pre_order">Cancel Pre-order</a></li>
+                                            <li><a href="/location">Our Locations</a></li>
+                                            <!-- Begin Header Bottom Menu Information Area -->
+                                            <li class="hb-info f-right p-0 d-sm-none d-lg-block">
+                                                <span>Manhattan College, NY</span>
+                                            </li>
+                                            <!-- Header Bottom Menu Information Area End Here -->
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!-- Header Bottom Menu Area End Here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header Bottom Area End Here -->
+              {% block content %} {% endblock %}

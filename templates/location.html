@@ -1,0 +1,153 @@
+{% extends "layout.html" %}
+{% block content %}
+            <!-- Begin Li's Breadcrumb Area -->
+            <div class="breadcrumb-area">
+                <div class="container">
+                    <div class="breadcrumb-content">
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li class="active">Search Location</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Li's Breadcrumb Area End Here -->
+                        <div class="wishlist-area pt-60 pb-60">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <form action="#">
+                                            <div class="table-content table-responsive">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="cart-product-name">Location Address</th>
+                                                            <th class="li-product-price">Phone Number</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                    {% if locations != null %}
+                                                        {% for location in locations %}
+                                                        <tr>
+                                                            <td class="li-product-name"><a>{{ location[0] }}</a></td>
+                                                            <td class="li-product-price"><span class="amount"> {{ location[1] }}</span></td>
+                                                        </tr>
+                                                        {% endfor %}
+                                                    {% endif %}
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Wishlist Area End-->
+                <!-- Begin Footer Area -->
+            <div class="footer">
+                <!-- Begin Footer Static Top Area -->
+                <div class="footer-static-top footer-static-top-3 pt-xs-50 pb-xs-10">
+                    <div class="container">
+                        <!-- Begin Footer Shipping Area -->
+                        <div class="footer-shipping pb-xs-0">
+                            <div class="row">
+                                <!-- Begin Li's Shipping Inner Box Area -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 pb-xs-45">
+                                    <div class="li-shipping-inner-box">
+                                        <div class="shipping-icon">
+                                            <img src="/static/images/shipping-icon/1.png" alt="Shipping Icon">
+                                        </div>
+                                        <div class="shipping-text">
+                                            <h2>Lots of Games</h2>
+                                            <p>Search your favorite games.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Li's Shipping Inner Box Area End Here -->
+                                <!-- Begin Li's Shipping Inner Box Area -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 pb-xs-45">
+                                    <div class="li-shipping-inner-box">
+                                        <div class="shipping-icon">
+                                            <img src="/static/images/shipping-icon/2.png" alt="Shipping Icon">
+                                        </div>
+                                        <div class="shipping-text">
+                                            <h2>Location</h2>
+                                            <p>Check the location closer to you.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Li's Shipping Inner Box Area End Here -->
+                                <!-- Begin Li's Shipping Inner Box Area -->
+                                <div class="col-lg-3 col-md-3 col-sm-6 pb-xs-45">
+                                    <div class="li-shipping-inner-box">
+                                        <div class="shipping-icon">
+                                            <img src="/static/images/shipping-icon/3.png" alt="Shipping Icon">
+                                        </div>
+                                        <div class="shipping-text">
+                                            <h2>Cancel Your Pre order</h2>
+                                            <p>Cancel the Pre order you made at our location.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Li's Shipping Inner Box Area End Here -->
+                                <!-- Begin Li's Shipping Inner Box Area -->
+                                <div class="col-lg-3 col-md-3 col-sm-6">
+                                    <div class="li-shipping-inner-box last-child">
+                                        <div class="shipping-icon">
+                                            <img src="/static/images/shipping-icon/4.png" alt="Shipping Icon">
+                                        </div>
+                                        <div class="shipping-text">
+                                            <h2>Inventory</h2>
+                                            <p>Check which location has the game you want.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Li's Shipping Inner Box Area End Here -->
+                            </div>
+                        </div>
+                        <!-- Footer Shipping Area End Here -->
+                    </div>
+                </div>
+                <!-- Footer Static Top Area End Here -->
+                <!-- Begin Footer Static Middle Area -->
+                <div class="footer-static-middle">
+                    <div class="container">
+                        <div class="footer-logo-wrap pt-50 pb-35">
+                            <div class="row">
+
+                                <!-- Footer Block Area End Here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Static Middle Area End Here -->
+                <!-- Begin Footer Static Bottom Area -->
+                <div class="footer-static-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!-- Begin Footer Links Area -->
+                                   <div class="footer-links">
+                                    <ul>
+                                        <li><a href="https://www.youtube.com/watch?v=K1aZzGmI9QA">Distinguished Gentleman</a></li>
+                                        <li><a href="https://www.youtube.com/watch?v=UPXUG8q4jKU">Pizza rat</a></li>
+                                        <li><a href="https://puginarug.com/">Holy pug</a></li>
+                                        <li><a href="https://cursoreffects.com/">90's</a></li>
+                                </div>
+                                <!-- Footer Links Area End Here -->
+                                <!-- Begin Copyright Area -->
+                                <div class="copyright text-center pt-30 pb-50">
+                                    <span><a target="_blank">© 2023 GameStart</a></span>
+                                </div>
+                                <!-- Copyright Area End Here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Static Bottom Area End Here -->
+            </div>
+            <!-- Footer Area End Here -->
+    </body>
+</html>
+ {% endblock %}
