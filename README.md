@@ -4,7 +4,7 @@ Made for the Database System class final project.
 Creators: Giovanni Casonato, Luigi Albano
 
 The idea:
-Make a website for a company that sells videogames GameStart (yes, the name is as original as the whole project)
+Make a website for a company that sells videogames, GameStart (yes, the name is as original as the whole project)
 and link the database from SQL (not in this repo) to the html page.
 
 Comments:
